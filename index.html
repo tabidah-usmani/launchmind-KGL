@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuSprint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2f4f7f;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #3a6070;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .headings {
+            color: #34c759;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            margin-bottom: 10px;
+        }
+        .features li::before {
+            content: "\2022";
+            color: #34c759;
+            font-weight: bold;
+            display: inline-block;
+            width: 20px;
+            margin-left: -20px;
+        }
+        .call-to-action {
+            background-color: #34c759;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .call-to-action:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="headings">Auto-Generate Documentation with DocuSprint</h1>
+        <p>DocuSprint auto-generates README and API docs from codebases for solo developers and open source maintainers.</p>
+        <h2 class="headings">Key Features:</h2>
+        <ul class="features">
+            <li>README Generator: Auto-generate README from codebase</li>
+            <li>API Docs Generator: Generate API docs from annotations</li>
+            <li>Code Example Extraction: Extract usage examples from code</li>
+            <li>Customizable Templates: Customize doc look and feel</li>
+            <li>CI/CD Integration: Auto-update docs on code changes</li>
+        </ul>
+        <button class="call-to-action">Generate My Docs Free</button>
+    </div>
+</body>
+</html>
