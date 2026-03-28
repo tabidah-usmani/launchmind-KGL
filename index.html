@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuSprint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2f4f7f;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1a2b3c;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subheadline {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            margin-bottom: 10px;
+        }
+        .features li::before {
+            content: "\2713";
+            color: #34c759;
+            margin-right: 10px;
+        }
+        .call-to-action {
+            background-color: #34c759;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .call-to-action:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="headline">DocuSprint: Automate Your Documentation</h1>
+        <p class="subheadline">DocuSprint auto-generates README and API docs from codebases for solo developers and open source maintainers, saving them time and effort in creating high-quality documentation.</p>
+        <ul class="features">
+            <li>Repository Analysis: Analyze GitHub repository links to determine the type of project and required documentation</li>
+            <li>Automatic Documentation Generation: Generate high-quality README and API documentation based on the repository analysis</li>
+            <li>Custom Template Library: Offer a library of customizable documentation templates for paid users</li>
+            <li>Freemium Model Limitations: Implement limitations on free accounts, such as repository size limits and limited template options</li>
+            <li>Subscription Management: Allow users to upgrade or downgrade their subscription plans and access premium features</li>
+        </ul>
+        <button class="call-to-action">Generate My Docs Free</button>
+    </div>
+</body>
+</html>
