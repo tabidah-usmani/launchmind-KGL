@@ -38,6 +38,9 @@ def get_main_sha():
 
 
 def create_branch(branch_name, sha):
+    delete_url = f"https://api.github.com/repos/{GITHUB_REPO}/git/refs/heads/{branch_name}"
+    requests.delete(delete_url, headers=HEADERS)
+    
     url = f"https://api.github.com/repos/{GITHUB_REPO}/git/refs"
     r = requests.post(url, headers=HEADERS, json={
         "ref": f"refs/heads/{branch_name}",

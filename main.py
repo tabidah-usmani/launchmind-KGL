@@ -2,8 +2,12 @@
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
+from message_bus import clear_all, print_full_history
+# clear_all()
 from agents import ceo_agent, product_agent, engineer_agent, marketing_agent, qa_agent
-from message_bus import print_full_history
+import socket
+print("Connecting to Redis at:", socket.gethostbyname('localhost'))
+
 
 IDEA = """DocuSprint is a web-based tool for solo developers and open source 
 maintainers that automatically generates a clean README, API documentation, 

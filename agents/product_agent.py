@@ -7,6 +7,8 @@ import re
 from groq import Groq
 from message_bus import send_message, get_messages, log_decision
 
+# REMOVE this
+from groq import Groq
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 def call_llm(system_prompt, user_prompt):
