@@ -7,21 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #2f4f7f;
             color: #fff;
+            padding: 0;
+            margin: 0;
         }
         .container {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #3a6070;
+            background-color: #1a2f5a;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .headings {
-            color: #34c759;
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subheadline {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
         }
         .features {
             list-style: none;
@@ -30,21 +37,23 @@
         }
         .features li {
             margin-bottom: 10px;
+            padding: 10px;
+            background-color: #233963;
+            border-radius: 5px;
         }
-        .features li::before {
-            content: "\2022";
-            color: #34c759;
+        .features li .feature-name {
             font-weight: bold;
-            display: inline-block;
-            width: 20px;
-            margin-left: -20px;
+        }
+        .features li .feature-description {
+            font-size: 14px;
+            color: #ccc;
         }
         .call-to-action {
             background-color: #34c759;
             color: #fff;
             border: none;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
         }
@@ -55,15 +64,30 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="headings">Auto-Generate Documentation with DocuSprint</h1>
-        <p>DocuSprint auto-generates README and API docs from codebases for solo developers and open source maintainers.</p>
-        <h2 class="headings">Key Features:</h2>
+        <h1 class="headline">DocuSprint</h1>
+        <p class="subheadline">Automatically generate high-quality README and API documentation from codebases for solo developers and open source maintainers, saving you time and effort in creating and maintaining production-ready documentation.</p>
+        <h2>Features</h2>
         <ul class="features">
-            <li>README Generator: Auto-generate README from codebase</li>
-            <li>API Docs Generator: Generate API docs from annotations</li>
-            <li>Code Example Extraction: Extract usage examples from code</li>
-            <li>Customizable Templates: Customize doc look and feel</li>
-            <li>CI/CD Integration: Auto-update docs on code changes</li>
+            <li>
+                <span class="feature-name">Auto-README Generation</span>
+                <span class="feature-description">Generate a clean and concise README file based on the codebase, including project description, installation instructions, and usage examples, with support for multiple programming languages and frameworks.</span>
+            </li>
+            <li>
+                <span class="feature-name">API Documentation Generation</span>
+                <span class="feature-description">Create comprehensive API documentation, including endpoint descriptions, parameter explanations, and example requests and responses, with support for OpenAPI and Swagger formats.</span>
+            </li>
+            <li>
+                <span class="feature-name">Custom Template Support</span>
+                <span class="feature-description">Allow users to create and upload custom templates for their documentation, including support for different formatting styles, logos, and branding elements, with the ability to save and reuse templates across multiple projects.</span>
+            </li>
+            <li>
+                <span class="feature-name">Large Repository Support</span>
+                <span class="feature-description">Handle large and complex repositories by using advanced parsing algorithms and caching mechanisms to ensure fast and efficient documentation generation, with support for repositories with multiple submodules and dependencies.</span>
+            </li>
+            <li>
+                <span class="feature-name">Consistency Checking</span>
+                <span class="feature-description">Analyze documentation across multiple repositories and versions to ensure consistency in formatting, style, and content, and provide recommendations for improvement, with support for automated checks and manual review workflows.</span>
+            </li>
         </ul>
         <button class="call-to-action">Generate My Docs Free</button>
     </div>
