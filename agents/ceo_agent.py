@@ -234,7 +234,7 @@ def run(idea, product_agent, engineer_agent, marketing_agent, qa_agent):
     )
 
     # Feedback loop 1 — Product revision if needed
-    max_retries = 2
+    max_retries = 6
     retry = 0
     while product_review.get("verdict") == "fail" and retry < max_retries:
         retry += 1
@@ -258,8 +258,11 @@ def run(idea, product_agent, engineer_agent, marketing_agent, qa_agent):
             f"Startup idea: {idea}"
         )
 
-    print(f"[CEO] Product spec accepted after {retry} revision(s)")
-
+    if product_review.get("verdict") == "pass":
+            print(f"[CEO] Product spec accepted after {retry} revision(s)")
+    else:
+        print(f"[CEO] Product spec could not be approved after {max_retries} revisions. Proceeding with best effort.")
+        log_decision("ceo", "product spec max retries reached", f"Using spec after {retry} revisions despite failing review")
     # ─────────────────────────────────────────
     # STEP 4: Send spec to Engineer + Marketing
     # ─────────────────────────────────────────
