@@ -75,7 +75,7 @@ CEO → Slack         (final summary message)
 
 The system implements dynamic decision-making through two feedback loops:
 
-**Loop 1 — Product Review:** CEO receives the product spec, sends it to the LLM for review, and if rejected sends a `revision_request` back to the Product agent with specific feedback. This repeats up to 2 times.
+**Loop 1 — Product Review:** CEO receives the product spec, sends it to the LLM for review, and if rejected sends a `revision_request` back to the Product agent with specific feedback. This repeats up to 6 times.
 
 **Loop 2 — Engineer Review:** QA agent reviews the HTML landing page and if it fails, CEO sends a `revision_request` to the Engineer agent with specific issues listed. Engineer regenerates the HTML and QA reviews again.
 
@@ -91,7 +91,6 @@ The system implements dynamic decision-making through two feedback loops:
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/tabidah-usmani/launchmind-KGL.git
-cd launchmind-KGL
 ```
 
 ### 2. Install dependencies
@@ -229,7 +228,7 @@ launchmind-KGL/
 ## Links
 
 - **GitHub Repository:** https://github.com/tabidah-usmani/launchmind-KGL
-- **GitHub PR created by Engineer Agent:** https://github.com/tabidah-usmani/launchmind-KGL/pull/20
+- **GitHub PR created by Engineer Agent:** https://github.com/tabidah-usmani/launchmind-KGL/pull/88
 
 ### Slack Bot in Action
 
@@ -247,30 +246,8 @@ Both messages use Slack Block Kit formatting.
 | Member | Agent(s) | Responsibility |
 |---|---|---|
 | Tabidah Usmani | CEO Agent | Orchestration, task decomposition, LLM review, feedback loops |
-| Member 2 | Product Agent + Engineer Agent | Product spec generation, HTML landing page, GitHub integration |
-| Member 3 | Marketing Agent + QA Agent | Marketing copy, email, Slack posting, QA review |
+| Umema Asher | Product Agent + Engineer Agent | Product spec generation, HTML landing page, GitHub integration |
+| Hamza Asad | Marketing Agent + QA Agent | Marketing copy, email, Slack posting, QA review |
 
 ---
 
-## Bonus Features Implemented
-
-| Bonus | Details | Marks |
-|---|---|---|
-| QA Agent | Fully implemented with PR inline comments | +5% |
-| Redis pub/sub | Message bus uses Redis channels instead of shared dict | +3% |
-| Multiple feedback loops | CEO runs Product revision loop x2 and Engineer revision loop x2 | +2% |
-| Graceful failure handling | try/except in all agents with fallback reporting to CEO | +3% |
-
----
-
-## Common Issues
-
-**ModuleNotFoundError** — Run `pip install -r requirements.txt`
-
-**Redis connection failed** — Make sure Redis is running: `sudo service redis-server start` in WSL
-
-**Slack DNS error** — Switch to mobile hotspot if on university network
-
-**Groq rate limit** — Wait 16 minutes and try again (free tier: 100k tokens/day)
-
-**GitHub PR already exists** — The Engineer agent automatically detects and reuses existing PRs
