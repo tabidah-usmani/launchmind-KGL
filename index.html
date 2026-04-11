@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DocuSprint</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2f4f7f;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1a1d23;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .headline {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subheadline {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .features li {
+      margin-bottom: 10px;
+    }
+    .features li::before {
+      content: "\2713";
+      color: #34c759;
+      margin-right: 10px;
+    }
+    .call-to-action {
+      background-color: #34c759;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .call-to-action:hover {
+      background-color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">DocuSprint</h1>
+    <p class="subheadline">Auto-generate README and API docs from your codebase in seconds, for solo developers and open source maintainers.</p>
+    <h2>Features</h2>
+    <ul class="features">
+      <li>Automatic README Generation: Generate a clean and concise README file based on your codebase</li>
+      <li>API Documentation Generation: Automatically generate API documentation from your codebase, including usage examples</li>
+      <li>GitHub Repository Support: Support for generating documentation from GitHub repositories, with the ability to paste a repo link and receive documentation in seconds</li>
+      <li>Custom Template Options: Paid users can access custom templates for their documentation, allowing for further personalization and branding</li>
+      <li>Free and Paid Tiers: A freemium model with a free tier for small repositories (less than 1000 lines of code) and a paid tier for unlimited access and custom templates, with pricing starting at $9.99/month</li>
+    </ul>
+    <button class="call-to-action">Generate My Docs Free</button>
+  </div>
+</body>
+</html>
